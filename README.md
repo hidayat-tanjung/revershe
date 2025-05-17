@@ -1,5 +1,6 @@
 # Python Reverse Shell Tool
-![carbon](https://github.com/user-attachments/assets/2ef5b2ae-005e-453e-a2f7-ab046fa65ec7)
+![carbon (1)](https://github.com/user-attachments/assets/bb463d32-d556-4743-af68-8ebd0b32510d)
+
 Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 
 ## Fitur Utama
@@ -9,6 +10,27 @@ Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 - 📱 **Multi-Platform**: Bekerja di Windows, Linux, dan macOS
 - 💻 **Shell Interaktif**
 - 📡 **Port Customizable**
+
+# Fitur Tambahan 
+- Detailed logging to file
+- Different log levels
+- Critical error tracking
+- Connection errors (timeout, refused, etc.)
+- Command execution errors
+- Listener setup errors
+- Input validation
+- Auto-reconnect mechanism
+- Input validation for IP/port
+- Better resource cleanup
+- Graceful shutdown
+- Proper socket cleanup
+- Error messages don't reveal sensitive info
+- Input sanitization
+- Clear error messages
+- Colorized output
+- Helpful status messages
+
+
 
 ## Persyaratan
 
@@ -22,12 +44,12 @@ Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 
 1. Mode Listener (Target)
  ```console
- python3 reverse.py -l -p 4444
+ python3 shell.py -l -p 5555
 ```
 
 2. Mode Client (Attacker)
  ```console
-python3 reverse.py -c <IP_TARGET> -p 4444 
+python3 reverse.py -c <IP_TARGET> -p 5555
 ```
 
 * Untuk Sistem Linux/Mac
@@ -78,5 +100,3 @@ MIT License
 Copyright (c) Izumy
 
 [![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=github)](https://github.com/hidayat-tanjung/revershe/)
-
-
