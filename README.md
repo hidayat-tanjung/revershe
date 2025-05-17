@@ -49,6 +49,6 @@ MIT License
 
 Copyright (c) Izumy
 
-[![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=github)](https://github.com/hidayat-tanjung/CryptoAnalyzer)
+[![GitHub](https://img.shields.io/badge/GitHub-View_Project-blue?logo=github)](https://github.com/hidayat-tanjung/revershe/)
 
 
