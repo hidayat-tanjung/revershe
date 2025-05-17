@@ -1,5 +1,5 @@
 # Python Reverse Shell Tool
-![carbon](https://github.com/user-attachments/assets/84069659-70af-4767-ab00-a2e9b6577bb4)
+![carbon](https://github.com/user-attachments/assets/b3b3c0a2-c7c9-423d-8652-d2f498aabfd6)
 
 Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 
