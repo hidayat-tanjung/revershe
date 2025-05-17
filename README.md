@@ -22,12 +22,12 @@ Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 
 1. Mode Listener (Target)
  ```console
- python3 reverse_shell.py -l -p 4444
+ python3 reverse.py -l -p 4444
 ```
 
 2. Mode Client (Attacker)
  ```console
-python3 reverse_shell.py -c <IP_TARGET> -p 4444 -i
+python3 reverse.py -c <IP_TARGET> -p 4444 -i
 ```
 
 | Command | Description |
