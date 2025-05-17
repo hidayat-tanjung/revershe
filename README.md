@@ -31,13 +31,18 @@ Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 - Helpful status messages
 
 
-
 ## Persyaratan
 
 - Python 3.6+
 - Modul `cryptography` (untuk versi enkripsi)
  ```console
  pip install cryptography
+```
+## Install
+ ```console
+git clone https://github.com/hidayat-tanjung/revershe
+chomd +x reverse.py
+python3 reverse.py
 ```
 
 # Cara Penggunaan
