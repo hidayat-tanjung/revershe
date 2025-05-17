@@ -44,7 +44,7 @@ Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 
 1. Mode Listener (Target)
  ```console
- python3 shell.py -l -p 5555
+ python3 reverse.py -l -p 5555
 ```
 
 2. Mode Client (Attacker)
