@@ -27,7 +27,7 @@ Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 
 2. Mode Client (Attacker)
  ```console
-python3 reverse.py -c <IP_TARGET> -p 4444 -i
+python3 reverse.py -c <IP_TARGET> -p 4444 
 ```
 
 | Command | Description |
