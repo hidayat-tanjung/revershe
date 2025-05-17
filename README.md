@@ -1,5 +1,5 @@
 # Python Reverse Shell Tool
-![carbon (1)](https://github.com/user-attachments/assets/bb463d32-d556-4743-af68-8ebd0b32510d)
+![carbon](https://github.com/user-attachments/assets/84069659-70af-4767-ab00-a2e9b6577bb4)
 
 Tool reverse shell sederhana berbasis Python untuk penetration testing yang sah.
 
@@ -44,20 +44,23 @@ git clone https://github.com/hidayat-tanjung/revershe
 chomd +x reverse.py
 python3 reverse.py
 ```
-
 # Cara Penggunaan
 
-1. Mode Listener (Target)
+1. Star Listener 
  ```console
- python3 reverse.py -l -p 5555
+python3 reverse.py
 ```
+Pilih menu 1 (Start Listener) dan masukkan port (misal 8888)
 
-2. Mode Client (Attacker)
+2. Connect dari komputer lain:
  ```console
-python3 reverse.py -c <IP_TARGET> -p 5555
+python3 reverse.py
 ```
+Pilih menu 2 (Connect to Target) dan masukkan:
+* IP target (misal 192.168.1.100)
+* Port yang sama (8888)
 
-* Untuk Sistem Linux/Mac
+# Untuk Sistem Linux/Mac
 ```console
 shell> ls          # Lihat isi direktori
 shell> pwd         # Lihat direktori saat ini 
